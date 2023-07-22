@@ -1,6 +1,6 @@
 #------------------ O que você aprenderá aqui? Em suma o código você irá aprender faz uma solicitação HTTP para o link do site especificado que você pretende fazer o Web Scraping
 # Neste processo você OBTÊM O HTML DA PÁGINA e o IMPRIME NO TERMINAL. 
-# Esse é o primeiro passo no processo de web scraping, pois agora você tem o conteúdo da página e pode usar a biblioteca BeautifulSoup para analisar e extrair informações específicas do HTML.
+# Esse é o primeiro passo do processo de web scraping, pois agora você tem o conteúdo da página e pode usar a biblioteca BeautifulSoup para analisar e extrair informações específicas do HTML.
 
 
 # Muito importante!!! Lembre-se de ter intalado o BealtifulSoup e a biblioteca REQUESTS
@@ -13,22 +13,24 @@ from bs4 import BeautifulSoup
 
 # Após ter importado o necessário o próximo passo é recuperar/obter o html
 # A seguir é possivel ver os códigos para recuperar o HTML, ou seja - parte inicial do processo
-# Para isso primeiramente você precisa do link do site em que será feito o WebScraping armazenando em uma variável
+# Para isso primeiramente você precisa do link do site em que será feito o WebScraping armazenando em uma variável string:
 
 link_do_site = "https://pt.wikipedia.org/wiki/Comunitarismo"
 
 # A estrutura de extração de html é simples; basta fazer o seguinte:
-# Crie uma variável com: requests.get(aqui você põe a váriavel que contêm o link). O exemplo pode ser visto na próxima variável:
+# Crie uma variável com a seguinte estrutura: requests.get(aqui entre parênteses você põe a váriavel que contêm o link). O exemplo pode ser visto na próxima variável:
 
 requisicao = requests.get(link_do_site)
 
 # Após isso você já fez a requisição do link e já está tudo pronto para imprimir o HTML dentro do seu script python
 # A impressão será dada da seguinte forma: print(nome da variável que contem a requisicao.text).
 # O método .text é usado para extrair o texto contido em uma tag HTML
-# Se você acha que ficou confuso observe o processo sendo feito na pŕoxima variável:
+# Se você ficou confuso observe o processo sendo feito na pŕoxima variável:
 
 print(requisicao.text)
 
+# Observe que requisicao que está dentro do parênteses é a variável em que foi armazenada requests juntamente com o método .get e a variável contendo o link do site entre parênteses
+
 # Ao rodar o programa será retornado a voce a impressão do conteúdo HTML da página usando o método .text da variável requests. 
 # O HTML da página será exibido no terminal logo assim que o programa for executado.
-# Se você receber como resposta linhas de código enormes e a priori bastante confusas; parabéns, você conseguiu concluir o primero passo e extrair  o conteúdo HTML da paǵina.
+# Se você receber como resposta linhas de código enormes e a priori bastante confusas; parabéns, você conseguiu concluir o primero passo e extrair o conteúdo HTML da paǵina.
